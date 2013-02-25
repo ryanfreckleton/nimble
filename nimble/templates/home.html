@@ -6,8 +6,8 @@
 <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
 
 <style>
-#set div { width: 250px; height: 250px; padding: 0.5em; float: left; margin: 0 10px 10px 0; }
-#set { clear:both; float:left; width: 960px; height: 860px; }
+#set div { width: 350px; height: 200px; padding: 0.5em; float: left; margin: 0 10px 10px 0; font-family: sans, verdana; font-size: 1em;}
+#set { clear:both; float:left; width: 100%; height: 100%; }
 p { clear:both; margin:0; padding:1em 0; }
 </style>
 
@@ -25,6 +25,7 @@ $(function() {
   <div class="board">
     <h1 class="docs">[Specific Board Name Goes Here]</h1>
     {% if cards %}
+<<<<<<< HEAD
       <div id="set">
       {% for card in cards %}
 	<div class="card ui-widget-content">
@@ -32,6 +33,18 @@ $(function() {
             <p class="story">{{ card.story }}</p>
             <p class="criteria">{{ card.criteria }}</p>
             <p class="estimate"> {{ card.estimate }}</p>
+=======
+
+    <h3 class="docs">Nimble Board</h3>
+      <div id="set">
+      {% for card in cards %}
+	<div class="ui-widget-content">
+	ID: {{ card.id }}<br />
+	Summary: {{ card.summary }}<br />
+	Story: {{ card.story }}<br />
+	Criteria: {{ card.criteria }}<br />
+	Estimate: {{ card.estimate }}<br />
+>>>>>>> f8f3797cad00173b2de3d7692a0ca225db74ce6d
         </div>
       {% endfor %}
       </div>
